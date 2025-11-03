@@ -3,7 +3,6 @@ parse_config:
     - "modules/zmk/helpers/include"
   zmk_preamble: |
     #include <zmk-helpers/key-labels/sofle.h>
-    #define CONFIG_WIRELESS
     #define KEYMAP_DRAWER
   raw_binding_map:
     "&sys_reset": Reset
@@ -50,7 +49,6 @@ parse_config:
       type: backspace
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
-  trans_legend: {"t": "", "type": "trans"}
   zmk_keycode_map:
     # custom mappings
     LALT: Alt

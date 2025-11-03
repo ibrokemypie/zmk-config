@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   base:
-  - {t: Esc, s: '`'}
+  - '`'
   - '1'
   - '2'
   - '3'
@@ -13,7 +13,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - BACKSPACE
+  - '-'
   - Tab
   - Q
   - W
@@ -28,19 +28,19 @@ layers:
   - P
   - \
   - {t: Esc, h: caps}
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: Gui}
+  - {t: S, h: Alt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: LSHIFT}
   - G
   - $$mdi:arrow-left-bold$$
   - H
-  - J
-  - K
-  - L
-  - ;
+  - {t: J, h: RSHIFT}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Alt}
+  - {t: ;, h: Gui}
   - ''''
-  - Shift
+  - left_fn
   - Z
   - X
   - C
@@ -52,19 +52,19 @@ layers:
   - ','
   - .
   - /
-  - RIGHT SHIFT
-  - $$mdi:volume-off$$
-  - Ctrl
-  - LEFT GUI
-  - LEFT ALT
-  - left_fn
-  - Spc
-  - ENTER
-  - Spc
-  - ENTER
   - right_fn
-  - RIGHT GUI
-  - Ctrl
+  - $$mdi:volume-off$$
+  - left_fn
+  - BACKSPACE
+  - LSHIFT
+  - Spc
+  - ENTER
+  - ENTER
+  - ENTER
+  - Spc
+  - RSHIFT
+  - BACKSPACE
+  - right_fn
   left_fn:
   - '`'
   - F1
@@ -79,7 +79,7 @@ layers:
   - F9
   - F10
   - DELETE
-  - {type: trans}
+  - {t: ▽, type: trans}
   - '`'
   - Left Click
   - Middle Click
@@ -92,11 +92,11 @@ layers:
   - Home
   - '-'
   - '='
-  - {type: trans}
+  - {t: ▽, type: trans}
   - '~'
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Forward Click
   - Mouse ←
   - PgDn
@@ -105,7 +105,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - '['
   - ']'
-  - '&studio_unlock'
+  - {t: '&studio_unlock', type: held}
   - RGB OFF
   - RGB ON
   - RGB EFF
@@ -117,19 +117,19 @@ layers:
   - INSERT
   - F11
   - F12
-  - {type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:volume-off$$
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: held}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Left Click
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   right_fn:
   - '~'
   - BT 1
@@ -143,123 +143,123 @@ layers:
   - F8
   - F9
   - F10
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - BT CLR
   - BT CLR ALL
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Mouse ↓
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F11
   - F12
   - _
   - +
-  - {type: trans}
+  - {t: ▽, type: trans}
   - OUT USB
   - OUT BLE
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Mouse ←
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '{'
   - '}'
-  - {type: trans}
+  - {t: ▽, type: trans}
   - Reset
-  - {type: trans}
+  - {t: ▽, type: trans}
   - Boot
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Mouse →
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Reset
   - '&soft_off'
   - Boot
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - Left Click
-  - {type: trans}
-  - {type: trans}
   - {type: held}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Left Click
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   caps:
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - DELETE
   - Ctl+Tab
-  - {type: trans}
+  - {t: ▽, type: trans}
   - Ctl+W
   - Ctl+E
   - Ctl+R
   - Ctl+T
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+U
-  - {type: trans}
+  - {t: ▽, type: trans}
   - Ctl+O
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+D
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - {type: trans}
+  - {t: ▽, type: trans}
   - Ctl+]
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+ENTER
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - Ctl+ENTER
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
