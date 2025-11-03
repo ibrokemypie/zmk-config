@@ -25,7 +25,7 @@ The state of the entire firmware is pinned in my `west`
   [zmk-helpers](https://github.com/urob/zmk-helpers)
 - Fully automated, nix-powered [local build environment](#local-build-environment)
 
-![](draw/keymap.png)
+![](draw/eyelash_sofle.svg)
 ([Click here](https://raw.githubusercontent.com/urob/zmk-config/refs/heads/main/draw/base.svg)
 for a breakdown by layer - powered by
 [keymap-drawer](https://github.com/caksoylar/keymap-drawer).)
@@ -82,7 +82,7 @@ This is great but there are still a few rough edges:
      By setting the tapping term to something large but not crazy large (I use
      280ms), I can still use same-hand `mod` + `alpha` shortcuts by holding the
      mod for just a little while before tapping the alpha-key.
-  2. Sometimes, I want to press a modifier without another key (e.g., on
+  1. Sometimes, I want to press a modifier without another key (e.g., on
      Windows, tapping `Win` opens the search menu). Because the `balanced`
      flavour only kicks in when another key is pressed, this also requires
      waiting past `tapping-term-ms`.
@@ -263,16 +263,16 @@ environment is _completely isolated_ and won't pollute your system.
    . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
    ```
 
-2. Install [`direnv`](https://direnv.net/) (and optionally but recommended
+1. Install [`direnv`](https://direnv.net/) (and optionally but recommended
    [`nix-direnv`](https://github.com/nix-community/nix-direnv)[^4]) using your
    package manager of choice. E.g., using the `nix` package manager that we just
-   installed[^5]:
+   installed\[^5\]:
 
    ```
    nix profile install nixpkgs#direnv nixpkgs#nix-direnv
    ```
 
-3. Set up the `direnv` [shell-hook](https://direnv.net/docs/hook.html) for your
+1. Set up the `direnv` [shell-hook](https://direnv.net/docs/hook.html) for your
    shell. E.g., for `bash`:
 
    ```bash
@@ -300,7 +300,7 @@ environment is _completely isolated_ and won't pollute your system.
    git clone https://github.com/urob/zmk-config zmk-workspace
    ```
 
-2. Enter the workspace and set up the environment.
+1. Enter the workspace and set up the environment.
 
    ```bash
    # The first time you enter the workspace, you will be prompted to allow direnv
@@ -409,35 +409,35 @@ remaining issues:
   [introduction to Git](https://gist.github.com/urob/68a1e206b2356a01b876ed02d3f542c7)
   (useful for maintaining your own ZMK fork with a custom selection of PRs).
 
-[^1]:
-    I call it "timer-less", because the large tapping-term makes the behavior
-    insensitive to the precise timings. One may say that there is still the
-    `require-prior-idle` timeout. However, with both a large tapping-term and
-    positional-hold-taps, the behavior is _not_ actually sensitive to the
-    `require-prior-idle` timing: All it does is reduce the delay in typing;
-    i.e., variations in typing speed won't affect _what_ is being typed but
-    merely _how fast_ it appears on the screen.
+\[^1\]:
+I call it "timer-less", because the large tapping-term makes the behavior
+insensitive to the precise timings. One may say that there is still the
+`require-prior-idle` timeout. However, with both a large tapping-term and
+positional-hold-taps, the behavior is _not_ actually sensitive to the
+`require-prior-idle` timing: All it does is reduce the delay in typing;
+i.e., variations in typing speed won't affect _what_ is being typed but
+merely _how fast_ it appears on the screen.
 
-[^2]:
-    The delay is determined by how quickly a key is released and is not directly
-    related to the tapping-term. But regardless of its duration, most people
-    still find it noticeable and disruptive.
+\[^2\]:
+The delay is determined by how quickly a key is released and is not directly
+related to the tapping-term. But regardless of its duration, most people
+still find it noticeable and disruptive.
 
-[^3]:
-    E.g, if your WPM is 70 or larger, then the default of 150ms (=10500/70)
-    should work well. The rule of thumb is based on an average character length
-    of 4.7 for English words. Taking into account 1 extra tap for `space`, this
-    yields a minimum `require-prior-idle-ms` of (60 _ 1000) / (5.7 _ x) ≈ 10500
-    / x milliseconds. The approximation errs on the safe side, as in practice
-    home row taps tend to be faster than average.
+\[^3\]:
+E.g, if your WPM is 70 or larger, then the default of 150ms (=10500/70)
+should work well. The rule of thumb is based on an average character length
+of 4.7 for English words. Taking into account 1 extra tap for `space`, this
+yields a minimum `require-prior-idle-ms` of (60 _ 1000) / (5.7 _ x) ≈ 10500
+/ x milliseconds. The approximation errs on the safe side, as in practice
+home row taps tend to be faster than average.
 
-[^4]:
-    `nix-direnv` provides a vastly improved caching experience compared to only
-    having `direnv`, making entering and exiting the workspace instantaneous
-    after the first time.
+\[^4\]:
+`nix-direnv` provides a vastly improved caching experience compared to only
+having `direnv`, making entering and exiting the workspace instantaneous
+after the first time.
 
-[^5]:
-    This will permanently install the packages into your local profile, forgoing
-    many of the benefits that make Nix uniquely powerful. A better approach,
-    though beyond the scope of this document, is to use `home-manager` to
-    maintain your user environment.
+\[^5\]:
+This will permanently install the packages into your local profile, forgoing
+many of the benefits that make Nix uniquely powerful. A better approach,
+though beyond the scope of this document, is to use `home-manager` to
+maintain your user environment.
