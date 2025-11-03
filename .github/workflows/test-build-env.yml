@@ -6,28 +6,24 @@ on:
       - nix/**
       - flake.*
       - .github/workflows/test-build-env.yml
-
 jobs:
   test:
     strategy:
       fail-fast: false
       matrix:
         include:
-          - { os: ubuntu-24.04,     system: x86_64-linux }
-          - { os: ubuntu-24.04-arm, system: aarch64-linux }
-          - { os: macos-15-intel,   system: x86_64-darwin }
-          - { os: macos-15,         system: aarch64-darwin }
-
+          - {os: ubuntu-24.04, system: x86_64-linux}
+          - {os: ubuntu-24.04-arm, system: aarch64-linux}
+          - {os: macos-15-intel, system: x86_64-darwin}
+          - {os: macos-15, system: aarch64-darwin}
     name: ${{ matrix.system }}
-
     runs-on: ${{ matrix.os }}
-
     steps:
       - uses: actions/checkout@v5
       - uses: cachix/install-nix-action@v31
       - name: Set up build environment
         run: nix develop --command just init
       - name: Test build recipe
-        run: nix develop --command just build planck
+        run: nix develop --command just build eyelash_sofle_left,nice_view,studio-rpc-usb-uart,eyelash_sofle_studio_left
       - name: Test draw recipe
         run: nix develop --command just draw
