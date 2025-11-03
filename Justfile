@@ -57,9 +57,8 @@ clean-nix:
 draw:
     #!/usr/bin/env bash
     set -euo pipefail
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/base.keymap" --virtual-layers Combos >"{{ draw }}/base.yaml"
-    yq -Yi '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
-    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" >"{{ draw }}/base.svg"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/eyelash_sofle.keymap" >"{{ draw }}/eyelash_sofle.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/eyelash_sofle.yaml" >"{{ draw }}/eyelash_sofle.svg"
 
 # initialize west
 init:

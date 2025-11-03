@@ -1,0 +1,265 @@
+layout: {zmk_keyboard: eyelash_sofle}
+layers:
+  base:
+  - {t: Esc, s: '`'}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - $$mdi:arrow-up-bold$$
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - BACKSPACE
+  - Tab
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - $$mdi:arrow-down-bold$$
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - {t: Esc, h: caps}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - $$mdi:arrow-left-bold$$
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - Shift
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - $$mdi:arrow-right-bold$$
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RIGHT SHIFT
+  - $$mdi:volume-off$$
+  - Ctrl
+  - LEFT GUI
+  - LEFT ALT
+  - left_fn
+  - Spc
+  - ENTER
+  - Spc
+  - ENTER
+  - right_fn
+  - RIGHT GUI
+  - Ctrl
+  left_fn:
+  - '`'
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Mouse ↑
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - DELETE
+  - {type: trans}
+  - '`'
+  - Left Click
+  - Middle Click
+  - Right Click
+  - Back Click
+  - Mouse ↓
+  - PgUp
+  - End
+  - $$mdi:arrow-up-bold$$
+  - Home
+  - '-'
+  - '='
+  - {type: trans}
+  - '~'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Forward Click
+  - Mouse ←
+  - PgDn
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - '['
+  - ']'
+  - '&studio_unlock'
+  - RGB OFF
+  - RGB ON
+  - RGB EFF
+  - RGB EFR
+  - RGB SPI
+  - Mouse →
+  - RGB BRI
+  - RGB BRD
+  - INSERT
+  - F11
+  - F12
+  - {type: trans}
+  - $$mdi:volume-off$$
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - Left Click
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  right_fn:
+  - '~'
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - {t: BT, h: '4'}
+  - Mouse ↑
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {type: trans}
+  - {type: trans}
+  - BT CLR
+  - BT CLR ALL
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Mouse ↓
+  - {type: trans}
+  - {type: trans}
+  - F11
+  - F12
+  - _
+  - +
+  - {type: trans}
+  - OUT USB
+  - OUT BLE
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Mouse ←
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '{'
+  - '}'
+  - {type: trans}
+  - Reset
+  - {type: trans}
+  - Boot
+  - {type: trans}
+  - {type: trans}
+  - Mouse →
+  - {type: trans}
+  - {type: trans}
+  - Reset
+  - '&soft_off'
+  - Boot
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Left Click
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  caps:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - DELETE
+  - Ctl+Tab
+  - {type: trans}
+  - Ctl+W
+  - Ctl+E
+  - Ctl+R
+  - Ctl+T
+  - {type: trans}
+  - {type: trans}
+  - Ctl+U
+  - {type: trans}
+  - Ctl+O
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  - Ctl+D
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {type: trans}
+  - Ctl+]
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Ctl+ENTER
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Ctl+ENTER
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+combos:
+- p: [14, 28, 40]
+  k: '&soft_off'
