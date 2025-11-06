@@ -55,15 +55,15 @@ layers:
   - right_fn
   - $$mdi:volume-off$$
   - left_fn
-  - BACKSPACE
   - LSHIFT
-  - Spc
-  - ENTER
-  - ENTER
-  - ENTER
-  - Spc
-  - RSHIFT
   - BACKSPACE
+  - ENTER
+  - Spc
+  - ENTER
+  - Spc
+  - ENTER
+  - BACKSPACE
+  - RSHIFT
   - right_fn
   left_fn:
   - '`'
