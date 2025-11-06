@@ -98,7 +98,6 @@ ZMK_HOLD_TAP(hmr,
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "base";
         };
 
         layer_1 {

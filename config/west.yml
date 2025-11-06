@@ -24,40 +24,21 @@ manifest:
       url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: whoop-t
+      url-base: https://github.com/whoop-t
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    # ZMK modules
-    # - name: zmk-adaptive-key
-    #   path: modules/zmk/adaptive-key
-    # - name: zmk-auto-layer
-    #   path: modules/zmk/auto-layer
     - name: zmk-helpers
       path: modules/zmk/helpers
-    # - name: zmk-leader-key
-    #   path: modules/zmk/leader-key
-    # - name: zmk-tri-state
-    #   path: modules/zmk/tri-state
     - name: zmk-unicode
       path: modules/zmk/unicode
     - name: eyelash_sofle
       url: https://github.com/a741725193/zmk-sofle
       revision: main
-      # Only source necessary Zephyr modules. Remove this entire section to restore
-      # the default (needed for less common hardware).
-      # - name: zephyr
-      #   remote: zmkfirmware
-      #   revision: v3.5.0+zmk-fixes
-      #   clone-depth: 1
-      #   import:
-      #     name-allowlist:
-      #       - cmsis
-      #       - hal_nordic
-      #       - hal_rpi_pico
-      #       - hal_stm32
-      #       - lvgl
-      #       - tinycrypt
-      #
+    - name: nice-adventure-time
+      remote: whoop-t
+      revision: main
   self:
     path: config
