@@ -58,9 +58,9 @@ layers:
   - LSHIFT
   - BACKSPACE
   - ENTER
-  - Spc
+  - {t: Spc, h: left_fn}
   - ENTER
-  - Spc
+  - {t: Spc, h: right_fn}
   - ENTER
   - BACKSPACE
   - RSHIFT
