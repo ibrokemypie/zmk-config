@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - BACKSPACE
-  - {t: Esc, h: raise}
+  - {t: Esc, h: lower}
   - {t: A, h: Gui}
   - {t: S, h: Alt}
   - {t: D, h: Ctrl}
@@ -56,16 +56,16 @@ layers:
   - $$mdi:volume-off$$
   - BACKSPACE
   - ENTER
-  - lower
+  - raise
   - LSHIFT
   - Spc
   - ENTER
   - ENTER
   - RSHIFT
-  - raise
+  - lower
   - Spc
   - BACKSPACE
-  raise:
+  lower:
   - {t: ▽, type: trans}
   - F1
   - F2
@@ -87,10 +87,10 @@ layers:
   - Ctl+T
   - {t: ▽, type: trans}
   - F12
-  - Ctl+U
   - {t: ▽, type: trans}
-  - Ctl+O
-  - {t: ▽, type: trans}
+  - PAGE DOWN
+  - PAGE UP
+  - +
   - DELETE
   - {type: held}
   - {t: ▽, type: trans}
@@ -121,7 +121,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - raise
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,7 +130,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  lower:
+  raise:
   - {t: ▽, type: trans}
   - F1
   - F2
@@ -190,9 +190,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Left Click
+  - Ctl+ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - adjust
   - {t: ▽, type: trans}
   - DELETE
   adjust:
@@ -222,7 +222,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - OUT USB
+  - {t: OUT USB, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -235,7 +235,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
   - RGB OFF
   - RGB ON
   - RGB EFF
@@ -257,6 +257,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
