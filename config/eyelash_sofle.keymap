@@ -9,24 +9,23 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
-#define L_FN 1
-#define R_FN 2
-#define CAPS_FN 3
+#define RAISE 1
+#define LOWER 2
+#define ADJUST 3
 
-&soft_off { hold-time-ms = <2000>; };
 
 /* Homerow mods */
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // Left-hand keys.
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // Right-hand keys.
-#define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4                                      // Thumb keys.S
+#define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4                                  // Thumb keys.
 
 /* Left-hand HRMs. */
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <100>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;
@@ -37,7 +36,7 @@ ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <100>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
@@ -47,22 +46,8 @@ ZMK_HOLD_TAP(hmr,
 
 #include "mouse.dtsi"
 
-/* ZMK_BASE_LAYER( */
-/*     default, */
-/* //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ */
-/*     &kp Q         &kp W         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp Y         &kp SQT     , */
-/* //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-/*     &hml LGUI A   &hml LALT R   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LALT I   &hmr LGUI O , */
-/* //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-/*     &hml LGUI A   &hml LALT R   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LALT I   &hmr LGUI O , */
-/* //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-/*     &kp Z         &kp X         &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &dot_morph    &qexcl      , */
-/* //╰─────────────┼─────────────┼─────────────┴─────────────├─────────────├─────────────├ ├────────────┼─────────────┼──────────────┴─────────────────────────────────────────╯ */
-/*                                              &lt_spc NAV 0  &kp K         &lt FN RET  ,   SMART_NUM    &kp K          MAGIC_SHIFT */
-/* //                                          ╰─────────────┴─────────────┴─────────────╯ ╰────────────┴─────────────┴─────────────╯ */
-/*     ) */
-
-
+/* adjust */
+ZMK_CONDITIONAL_LAYER(adjust, RAISE LOWER, ADJUST)
 
 / {
     scroll_encoder: scroll_encoder {
@@ -73,69 +58,59 @@ ZMK_HOLD_TAP(hmr,
         tap-ms = <100>;
     };
 
-    behaviors {
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <14 28 40>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+base {
             bindings = <
-&kp GRAVE            &kp N1              &kp N2                        &kp N3                                               &kp N4                  &kp N5                        &kp UP_ARROW           &kp N6                              &kp N7                          &kp N8                          &kp N9                        &kp N0                     &kp MINUS
-&kp TAB              &kp Q               &kp W                         &kp E                                                &kp R                   &kp T                         &kp DOWN_ARROW         &kp Y                               &kp U                           &kp I                           &kp O                         &kp P                      &kp BSLH
-&lt CAPS_FN ESC      &hml LGUI A         &hml LALT S                   &hml LCTRL D                                         &hml LSHIFT F           &kp G                         &kp LEFT_ARROW         &kp H                               &hmr RSHIFT J                   &hmr RCTRL K                    &hmr RALT L                   &hmr RGUI SEMI             &kp APOS
-&mo L_FN             &kp Z               &kp X                         &kp C                                                &kp V                   &kp B                         &kp RIGHT_ARROW        &kp N                               &kp M                           &kp COMMA                       &kp DOT                       &kp FSLH                   &mo R_FN
-&kp C_MUTE           &mo L_FN            &kp LSHIFT                    &kp BACKSPACE                                        &kp ENTER               &lt L_FN SPACE               &kp ENTER              &lt R_FN SPACE                     &kp ENTER                       &kp BACKSPACE                   &kp RSHIFT                    &mo R_FN                     
+&kp GRAVE       &kp N1        &kp N2      &kp N3       &kp N4        &kp N5    &kp UP       &kp N6    &kp N7        &kp N8       &kp N9      &kp N0         &kp MINUS
+&kp TAB         &kp Q         &kp W       &kp E        &kp R         &kp T     &kp DOWN     &kp Y     &kp U         &kp I        &kp O       &kp P          &kp BACKSPACE
+&lt RAISE ESC   &hml LGUI A   &hml LALT S &hml LCTRL D &hml LSHIFT F &kp G     &kp LEFT     &kp H     &hmr RSHIFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI &kp APOS
+&kp BACKSPACE   &kp Z         &kp X       &kp C        &kp V         &kp B     &kp RIGHT    &kp N     &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp PIPE
+&kp C_MUTE      &kp BACKSPACE &kp ENTER   &mo LOWER    &kp LSHIFT    &kp SPACE &kp ENTER    &kp ENTER &kp RSHIFT    &mo RAISE    &kp SPACE   &kp BACKSPACE 
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+};
 
-        left {
-            bindings = <
-&kp GRAVE           &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
-&trans              &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans              &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&studio_unlock      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE          &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+            
+lower {
+bindings = <
+&trans      &kp F1 &kp F2    &kp F3    &kp F4    &kp F5    &trans &kp F6        &kp F7    &kp F8        &kp F9      &kp F10   &kp F11
+&kp LC(TAB) &trans &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T) &trans &kp F12       &trans    &kp PAGE_DOWN &kp PAGE_UP &kp PLUS  &kp DELETE
+&trans      &trans &trans    &kp LC(D) &trans    &trans    &trans &kp LEFT      &kp DOWN  &kp UP        &kp RIGHT   &trans    &kp LC(RIGHT_BRACKET)
+&trans      &trans &trans    &trans    &trans    &trans    &trans &trans        &trans    &trans        &trans      &trans    &trans
+&trans      &trans &trans    &trans    &trans    &trans    &trans &kp LC(ENTER) &trans    &trans        &trans      &trans
+ >;
+
+     display-name = "lower";
+     sensor-bindings = <&scroll_encoder>;
+};
+ 
+ raise {
+ bindings = <
+&trans     &kp F1 &kp F2    &kp F3    &kp F4    &kp F5   &mmv MOVE_UP    &kp F6          &kp F7   &kp F8      &kp F9        &kp F10          &kp F11
+&trans     &trans &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &mmv MOVE_DOWN  &kp F12         &trans   &kp PAGE_UP &kp PAGE_DOWN &kp PLUS         &kp DELETE
+&trans     &trans &trans    &trans    &trans    &mkp MB5 &mmv MOVE_LEFT  &kp LEFT        &kp DOWN &kp UP      &kp RIGHT     &kp LEFT_BRACKET &kp RIGHT_BRACKET
+&trans     &trans &trans    &trans    &trans    &trans   &mmv MOVE_RIGHT &trans          &trans   &trans      &trans        &trans           &trans
+&kp C_MUTE &trans &trans    &trans    &trans    &trans   &mkp LCLK       &kp LC(ENTER)   &trans   &trans      &trans        &kp DELETE
+ >;
+
+     display-name = "raise";
+     sensor-bindings = <&scroll_encoder>;
+ };
+
+ adjust {
+ bindings = <
+&trans         &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &trans &trans          &trans          &trans &trans &trans &trans
+&out OUT_BLE   &bt BT_CLR      &bt BT_CLR_ALL &trans          &trans          &trans          &trans &trans          &trans          &trans &trans &trans &trans
+&out OUT_USB   &trans          &trans         &trans          &trans          &trans          &trans &trans          &trans          &trans &trans &trans &trans
+&trans         &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI &trans &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans &trans &trans &trans
+&sys_reset     &trans          &trans         &trans          &trans          &trans          &trans &trans          &trans          &trans &trans &trans
             >;
 
-            display-name = "left_fn";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        right {
-            bindings = <
-&kp TILDE  &bt BT_SEL 0          &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR            &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB          &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset            &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans                &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
-            >;
-
-            display-name = "right_fn";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        caps {
-            bindings = <
-&trans       &trans         &trans     &trans     &trans     &trans       &trans  &trans          &trans                 &trans        &trans              &trans  &kp DELETE
-&kp LC(TAB)  &trans         &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)    &trans  &trans          &kp LC(U)              &trans        &kp LC(O)           &trans  &trans
-&trans       &trans         &trans     &kp LC(D)  &trans     &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW         &kp UP_ARROW  &kp RIGHT_ARROW     &trans  &kp LC(RIGHT_BRACKET)
-&trans       &trans         &trans     &trans     &trans     &trans       &trans  &trans          &trans                 &trans        &trans              &trans  &trans
-&trans       &trans         &trans     &trans     &trans     &trans       &trans  &trans          &kp LC(ENTER)          &trans        &trans              &trans
-            >;
-
-            display-name = "caps";
+            display-name = "adjust";
             sensor-bindings = <&scroll_encoder>;
         };
     };

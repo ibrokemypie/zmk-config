@@ -1,11 +1,11 @@
 name: Test Local Build Environment
 on:
-  workflow_dispatch:
-  push:
-    paths:
-      - nix/**
-      - flake.*
-      - .github/workflows/test-build-env.yml
+  - workflow_dispatch
+# push:
+#   paths:
+#     - nix/**
+#     - flake.*
+#     - .github/workflows/test-build-env.yml
 jobs:
   test:
     strategy:
@@ -24,6 +24,6 @@ jobs:
       - name: Set up build environment
         run: nix develop --command just init
       - name: Test build recipe
-        run: nix develop --command just build eyelash_sofle_left,nice_view,studio-rpc-usb-uart,eyelash_sofle_studio_left
+        run: nix develop --command just build eyelash_sofle
       - name: Test draw recipe
         run: nix develop --command just draw

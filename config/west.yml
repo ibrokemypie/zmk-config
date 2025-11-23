@@ -26,6 +26,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: whoop-t
       url-base: https://github.com/whoop-t
+    - name: infely # new entry
+      url-base: https://github.com/infely # new entry
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -37,8 +39,8 @@ manifest:
     - name: eyelash_sofle
       url: https://github.com/a741725193/zmk-sofle
       revision: main
-    - name: nice-adventure-time
-      remote: whoop-t
-      revision: main
+    - name: nice-view-battery # new entry
+      remote: infely # new entry
+      revision: main # new entry
   self:
     path: config
