@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - BACKSPACE
-  - {t: Esc, h: lower}
+  - {t: Esc, h: raise}
   - {t: A, h: Gui}
   - {t: S, h: Alt}
   - {t: D, h: Ctrl}
@@ -52,7 +52,7 @@ layers:
   - ','
   - .
   - /
-  - '|'
+  - \
   - $$mdi:volume-off$$
   - BACKSPACE
   - ENTER
@@ -90,9 +90,9 @@ layers:
   - {t: ▽, type: trans}
   - PAGE DOWN
   - PAGE UP
-  - +
+  - '='
   - DELETE
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+D
@@ -103,7 +103,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: ▽, type: trans}
+  - Ctl+[
   - Ctl+]
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -127,7 +127,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+ENTER
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
@@ -155,9 +155,9 @@ layers:
   - {t: ▽, type: trans}
   - PAGE UP
   - PAGE DOWN
-  - +
+  - '='
   - DELETE
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -186,7 +186,7 @@ layers:
   - $$mdi:volume-off$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Left Click
@@ -251,12 +251,12 @@ layers:
   - Reset
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
