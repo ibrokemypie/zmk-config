@@ -13,7 +13,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '-'
+  - BACKSPACE
   - Tab
   - Q
   - W
@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - P
-  - BACKSPACE
+  - '-'
   - {t: Esc, h: raise}
   - {t: A, h: Gui}
   - {t: S, h: Alt}
@@ -56,13 +56,13 @@ layers:
   - $$mdi:volume-off$$
   - BACKSPACE
   - ENTER
-  - raise
   - LSHIFT
+  - raise
   - Spc
   - ENTER
   - ENTER
-  - RSHIFT
   - lower
+  - RSHIFT
   - Spc
   - BACKSPACE
   lower:
@@ -78,7 +78,7 @@ layers:
   - F8
   - F9
   - F10
-  - F11
+  - DELETE
   - Ctl+Tab
   - {t: ▽, type: trans}
   - Ctl+W
@@ -86,12 +86,12 @@ layers:
   - Ctl+R
   - Ctl+T
   - {t: ▽, type: trans}
+  - F11
   - F12
-  - {t: ▽, type: trans}
   - PAGE DOWN
   - PAGE UP
   - '='
-  - DELETE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -126,8 +126,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+ENTER
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
@@ -256,7 +256,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
