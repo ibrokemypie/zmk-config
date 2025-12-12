@@ -66,8 +66,8 @@ base {
             bindings = <
 &kp GRAVE       &kp N1        &kp N2      &kp N3       &kp N4        &kp N5    &kp UP       &kp N6    &kp N7        &kp N8       &kp N9      &kp N0         &kp MINUS
 &kp TAB         &kp Q         &kp W       &kp E        &kp R         &kp T     &kp DOWN     &kp Y     &kp U         &kp I        &kp O       &kp P          &kp BACKSPACE
-&lt RAISE ESC   &hml LGUI A   &hml LALT S &hml LCTRL D &hml LSHIFT F &kp G     &kp LEFT     &kp H     &hmr RSHIFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI &kp APOS
-&kp BACKSPACE   &kp Z         &kp X       &kp C        &kp V         &kp B     &kp RIGHT    &kp N     &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp PIPE
+&lt LOWER ESC   &hml LGUI A   &hml LALT S &hml LCTRL D &hml LSHIFT F &kp G     &kp LEFT     &kp H     &hmr RSHIFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI &kp APOS
+&kp BACKSPACE   &kp Z         &kp X       &kp C        &kp V         &kp B     &kp RIGHT    &kp N     &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
 &kp C_MUTE      &kp BACKSPACE &kp ENTER   &mo LOWER    &kp LSHIFT    &kp SPACE &kp ENTER    &kp ENTER &kp RSHIFT    &mo RAISE    &kp SPACE   &kp BACKSPACE 
             >;
 
@@ -77,10 +77,10 @@ base {
             
 lower {
 bindings = <
-&trans      &kp F1 &kp F2    &kp F3    &kp F4    &kp F5    &trans &kp F6        &kp F7    &kp F8        &kp F9      &kp F10   &kp F11
-&kp LC(TAB) &trans &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T) &trans &kp F12       &trans    &kp PAGE_DOWN &kp PAGE_UP &kp PLUS  &kp DELETE
-&trans      &trans &trans    &kp LC(D) &trans    &trans    &trans &kp LEFT      &kp DOWN  &kp UP        &kp RIGHT   &trans    &kp LC(RIGHT_BRACKET)
-&trans      &trans &trans    &trans    &trans    &trans    &trans &trans        &trans    &trans        &trans      &trans    &trans
+&trans      &kp F1 &kp F2    &kp F3    &kp F4    &kp F5    &trans &kp F6        &kp F7    &kp F8        &kp F9      &kp F10                   &kp F11
+&kp LC(TAB) &trans &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T) &trans &kp F12       &trans    &kp PAGE_DOWN &kp PAGE_UP &kp EQUAL                 &kp DELETE
+&trans      &trans &trans    &kp LC(D) &trans    &trans    &trans &kp LEFT      &kp DOWN  &kp UP        &kp RIGHT   &kp LC(LEFT_BRACKET)      &kp LC(RIGHT_BRACKET)
+&trans      &trans &trans    &trans    &trans    &trans    &trans &trans        &trans    &trans        &trans      &trans                    &trans
 &trans      &trans &trans    &trans    &trans    &trans    &trans &kp LC(ENTER) &trans    &trans        &trans      &trans
  >;
 
@@ -90,10 +90,10 @@ bindings = <
  
  raise {
  bindings = <
-&trans     &kp F1 &kp F2    &kp F3    &kp F4    &kp F5   &mmv MOVE_UP    &kp F6          &kp F7   &kp F8      &kp F9        &kp F10          &kp F11
-&trans     &trans &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &mmv MOVE_DOWN  &kp F12         &trans   &kp PAGE_UP &kp PAGE_DOWN &kp PLUS         &kp DELETE
-&trans     &trans &trans    &trans    &trans    &mkp MB5 &mmv MOVE_LEFT  &kp LEFT        &kp DOWN &kp UP      &kp RIGHT     &kp LEFT_BRACKET &kp RIGHT_BRACKET
-&trans     &trans &trans    &trans    &trans    &trans   &mmv MOVE_RIGHT &trans          &trans   &trans      &trans        &trans           &trans
+&trans     &kp F1 &kp F2    &kp F3    &kp F4    &kp F5   &mmv MOVE_UP    &kp F6          &kp F7   &kp F8      &kp F9        &kp F10            &kp F11
+&trans     &trans &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &mmv MOVE_DOWN  &kp F12         &trans   &kp PAGE_UP &kp PAGE_DOWN &kp EQUAL          &kp DELETE
+&trans     &trans &trans    &trans    &trans    &mkp MB5 &mmv MOVE_LEFT  &kp LEFT        &kp DOWN &kp UP      &kp RIGHT     &kp LEFT_BRACKET   &kp RIGHT_BRACKET
+&trans     &trans &trans    &trans    &trans    &trans   &mmv MOVE_RIGHT &trans          &trans   &trans      &trans        &trans             &trans
 &kp C_MUTE &trans &trans    &trans    &trans    &trans   &mkp LCLK       &kp LC(ENTER)   &trans   &trans      &trans        &kp DELETE
  >;
 
